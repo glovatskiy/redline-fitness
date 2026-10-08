@@ -192,11 +192,11 @@ body:has(#red-room-toggle:checked) .logo-red {
 /*--- Hero Subtitle ---*/
 .hero-subtitle {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
-  letter-spacing: 5px;
+  letter-spacing: 2.5px;
   color: var(--color-text);
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
 }
 /*--- Hero Discover Link ---*/
@@ -208,7 +208,7 @@ body:has(#red-room-toggle:checked) .logo-red {
 
   font-family: var(--font-body);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 3px;
   color: var(--color-text);
 
