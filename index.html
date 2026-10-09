@@ -24,7 +24,7 @@
         <span>LINE</span>
       </a>
       <div class="navigation-center">
-        <nav class="header-nav">
+        <nav class="header-nav" id="primary-navigation">
           <ul class="header-nav-items">
             <li><a href="#trainers" class="header-nav-item">TRAINERS</a></li>
             <li><a href="#classes" class="header-nav-item">CLASSES</a></li>
@@ -37,6 +37,15 @@
           <label for="red-room-toggle">RED ROOM</label>
           <input type="checkbox" id="red-room-toggle" />
         </div>
+       <button
+  type="button"
+  class="menu-toggle"
+  aria-label="Open navigation"
+  aria-controls="primary-navigation"
+  aria-expanded="false"
+>
+  <i class="fa-solid fa-bars" aria-hidden="true"></i>
+</button>
       </div>
       <a href="#classes" class="header-cta">BOOK A CLASS</a>
     </header>
@@ -358,37 +367,118 @@
         </div>
       </section>
       <!-- Find Your Red Section -->
-<section id="find-your-red" class="find-your-red">
-  <div class="find-your-red-image">
-    <img
-      src="./assets/images/find-your-red.webp"
-      alt="Close-up portrait of a man's face partially obscured by red shadows"
-    />
-  </div>
+      <section id="find-your-red" class="find-your-red">
+        <div class="find-your-red-image">
+          <img
+            src="./assets/images/find-your-red.webp"
+            alt="Close-up portrait of a man's face partially obscured by red shadows"
+          />
+        </div>
 
-  <div class="find-your-red-content">
-    <p class="section-label">SIGNATURE EFFECT</p>
+        <div class="find-your-red-content">
+          <p class="section-label">SIGNATURE EFFECT</p>
 
-    <h2>FIND YOUR <span class="find-your-red-highlight">RED.</span></h2>
+          <h2>
+            FIND YOUR
+            <span class="find-your-red-highlight">RED.</span>
+          </h2>
 
-<p class="find-your-red-description">
-  Step into the red light. Upload your photo and experience
-  the <span class="brand-red">RED</span><span class="brand-line">LINE</span> aesthetic.
-</p>
+          <p class="find-your-red-description">
+            Step into the red light. Upload your photo and experience the
+            <span class="brand-red">RED</span>
+            <span class="brand-line">LINE</span>
+            aesthetic.
+          </p>
 
-    <label class="upload-area" for="photo-upload">
-      <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
-      <span>UPLOAD YOUR PHOTO</span>
-      <small>Click to choose an image</small>
-    </label>
+          <label class="upload-area" for="photo-upload">
+            <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
+            <span>UPLOAD YOUR PHOTO</span>
+            <small>Click to choose an image</small>
+          </label>
 
-    <input
-      type="file"
-      id="photo-upload"
-      accept="image/*"
-    />
-  </div>
-</section>
+          <input type="file" id="photo-upload" accept="image/*" />
+        </div>
+      </section>
     </main>
+    <!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="footer-main">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <a href="#" class="footer-logo" aria-label="REDLINE Fitness home">
+        <span class="brand-red">RED</span><span class="brand-line">LINE</span>
+      </a>
+
+      <p class="footer-tagline">TRAIN IN A DIFFERENT LIGHT.</p>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Spotify">
+          <i class="fa-brands fa-spotify" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#trainers">TRAINERS</a>
+      <a href="#classes">SCHEDULE</a>
+      <a href="#membership">MEMBERSHIP</a>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <p>PRAGUE, CZECH REPUBLIC</p>
+
+    <div class="footer-legal">
+      <a href="#">PRIVACY</a>
+      <a href="#">TERMS</a>
+    </div>
+
+    <p>© 2026 REDLINE PERFORMANCE STUDIO</p>
+  </div>
+</footer>
+<script>
+  const header = document.querySelector(".header");
+  const menuButton = header.querySelector(".menu-toggle");
+  const navigation = header.querySelector("#primary-navigation");
+
+  function setMenuOpen(open) {
+    header.toggleAttribute("data-menu-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute(
+      "aria-label",
+      open ? "Close navigation" : "Open navigation"
+    );
+    menuButton.querySelector("i").className =
+      open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+  }
+
+  menuButton.addEventListener("click", () => {
+    setMenuOpen(!header.hasAttribute("data-menu-open"));
+  });
+
+  navigation.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && header.hasAttribute("data-menu-open")) {
+      setMenuOpen(false);
+      menuButton.focus();
+    }
+  });
+
+  window.matchMedia("(max-width: 767px)").addEventListener("change", () => {
+    setMenuOpen(false);
+  });
+
+  header.setAttribute("data-menu-ready", "");
+</script>
   </body>
 </html>
