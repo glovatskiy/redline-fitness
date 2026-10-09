@@ -157,6 +157,20 @@ body:has(#red-room-toggle:checked) .logo-red {
     0 0 6px rgba(255, 0, 0, 0.5),
     0 0 15px rgba(255, 0, 0, 0.25);
 }
+/* --- Trainers: RED ROOM Mode --- */
+
+/* RED ROOM — Trainers */
+
+body:has(#red-room-toggle:checked) .trainer-image::after {
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(60, 0, 0, 0.9) 0%,
+    rgba(50, 0, 0, 0.5) 25%,
+    rgba(40, 0, 0, 0.15) 60%,
+    rgba(40, 0, 0, 0) 100%
+  );
+}
 /*--- HERO classes ---*/
 .hero{
     height: 850px;
@@ -286,4 +300,87 @@ body:has(#red-room-toggle:checked) .logo-red {
   .ticker-track {
     animation: none;
   }
+}
+
+/*--- Trainers section ---*/
+.trainers{
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding: 120px 6%;
+}
+.trainers-header{
+    margin-bottom: 80px;
+}
+.section-label{
+    color: var(--color-red);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+}
+.trainers-header h2{
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1;
+}
+.trainers-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 48px;
+}
+.trainer-image{
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+.trainer-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.7s ease, transform 0.7 ease;
+}
+.trainer-card:hover .trainer-image img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+.trainer-specialisation {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1;
+
+  color: var(--color-red);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.trainer-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(to top, rgba(18, 18, 18, 0.9), transparent);
+  pointer-events: none;
+}
+.trainer-card h3 {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.trainer-card p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-muted);
 }
