@@ -33,7 +33,7 @@ a {
   background: var(--color-header-bg);
   box-sizing: border-box;
   transition: background-color 0.4s ease;
-    position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -58,13 +58,14 @@ a {
   font-family: var(--font-heading);
   font-size: 36px;
   letter-spacing: 4px;
-    display: inline-flex;
+  display: inline-flex;
   align-items: center;
-
 }
 .logo-red {
   color: var(--color-red);
-  transition: color 0.4s ease, text-shadow 0.4s ease;
+  transition:
+    color 0.4s ease,
+    text-shadow 0.4s ease;
 }
 .header-nav-item {
   font-family: var(--font-body);
@@ -172,18 +173,18 @@ body:has(#red-room-toggle:checked) .editorial-red {
   text-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
 }
 /*--- HERO classes ---*/
-.hero{
-    height: 850px;
-    background-image: url(./assets/images/hero-img.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero {
+  height: 850px;
+  background-image: url(./assets/images/hero-img.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hero-content{
-    text-align: center;
+.hero-content {
+  text-align: center;
 }
 .hero-title {
   font-family: var(--font-heading);
@@ -201,7 +202,9 @@ body:has(#red-room-toggle:checked) .editorial-red {
 .hero-highlight {
   color: var(--color-text);
   text-shadow: none;
-  transition: color 0.4s ease, text-shadow 0.4s ease;
+  transition:
+    color 0.4s ease,
+    text-shadow 0.4s ease;
 }
 /*--- Hero Subtitle ---*/
 .hero-subtitle {
@@ -244,14 +247,13 @@ body:has(#red-room-toggle:checked) .editorial-red {
 }
 
 .hero-discover:hover .discover-arrow {
-  filter:
-    drop-shadow(0 0 4px #ff0000)
-    drop-shadow(0 0 10px #ff0000)
+  filter: drop-shadow(0 0 4px #ff0000) drop-shadow(0 0 10px #ff0000)
     drop-shadow(0 0 18px rgba(255, 0, 0, 0.7));
 }
 
 @keyframes arrow-bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(45deg);
   }
 
@@ -288,12 +290,12 @@ body:has(#red-room-toggle:checked) .editorial-red {
 }
 
 @keyframes ticker-scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(calc(-50% - 6px));
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 6px));
+  }
 }
 /* Accessibility: Disable ticker animation for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
@@ -303,46 +305,48 @@ body:has(#red-room-toggle:checked) .editorial-red {
 }
 
 /*--- Trainers section ---*/
-.trainers{
-    background-color: var(--color-background);
-    color: var(--color-text);
-    padding: 120px 6%;
+.trainers {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 120px 6%;
 }
-.trainers-header{
-    margin-bottom: 80px;
+.trainers-header {
+  margin-bottom: 80px;
 }
-.section-label{
-    color: var(--color-red);
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin-bottom: 16px;
+.section-label {
+  color: var(--color-red);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
 }
-.trainers-header h2{
-    font-family: var(--font-heading);
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 1;
+.trainers-header h2 {
+  font-family: var(--font-heading);
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1;
 }
-.trainers-grid{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 48px;
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
 }
-.trainer-image{
-    position: relative;
-    aspect-ratio: 3/4;
-    overflow: hidden;
-    margin-bottom: 32px;
+.trainer-image {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  margin-bottom: 32px;
 }
-.trainer-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: grayscale(100%);
-    transition: filter 0.7s ease, transform 0.7 ease;
+.trainer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+  transition:
+    filter 0.7s ease,
+    transform 0.7 ease;
 }
 .trainer-card:hover .trainer-image img {
   filter: grayscale(0%);
@@ -385,7 +389,7 @@ body:has(#red-room-toggle:checked) .editorial-red {
   color: var(--color-muted);
 }
 /*--- Classes styles --*/
-.classes{
+.classes {
   background-color: var(--color-surface);
   color: var(--color-text);
   padding: 120px 6%;
@@ -432,7 +436,9 @@ body:has(#red-room-toggle:checked) .editorial-red {
   background-color: var(--color-background);
   padding: 32px;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: border-color 0.3s ease, background-color 0.4s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.4s ease;
 }
 .class-card:hover {
   border-color: var(--color-red);
@@ -544,5 +550,139 @@ body:has(#red-room-toggle:checked) .editorial-red {
 }
 .editorial-red {
   color: var(--color-red);
-  transition: color 0.4s ease, text-shadow 0.4s ease;
+  transition:
+    color 0.4s ease,
+    text-shadow 0.4s ease;
+}
+/*--- Membership section ---*/
+.membership {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  padding: 120px 6%;
+}
+.membership-header {
+  text-align: center;
+  margin-bottom: 96px;
+}
+.membership-header h2 {
+  font-family: var(--font-heading);
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1;
+}
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+.membership-card {
+  background-color: var(--color-background);
+  padding: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.4s ease;
+}
+.membership-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.membership-price {
+  font-family: var(--font-body);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+}
+.membership-price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+.membership-price-note {
+  color: var(--color-red);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 12px;
+}
+.membership-features {
+  list-style: none;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+.membership-button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-text);
+
+  width: 100%;
+  padding: 20px;
+  margin-top: 48px;
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.membership-button:hover {
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
+.membership-card-featured {
+  position: relative;
+  border: 2px solid var(--color-red);
+  transform: scale(1.05);
+  z-index: 1;
+}
+.membership-card-featured:hover {
+  border-color: var(--color-red);
+}
+.membership-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--color-red);
+  color: var(--color-text);
+  padding: 8px 24px;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+.membership-button-featured {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+  color: var(--color-text);
+}
+.membership-button-featured:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: var(--color-text);
+}
+.membership-card h3 {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 24px;
 }
