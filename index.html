@@ -16,31 +16,31 @@
     />
     <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
     <!-- Open Graph -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="REDLINE Fitness" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="REDLINE Fitness" />
 
-<meta
-  property="og:title"
-  content="REDLINE Fitness | Train in a Different Light"
-/>
+    <meta
+      property="og:title"
+      content="REDLINE Fitness | Train in a Different Light"
+    />
 
-<meta
-  property="og:description"
-  content="Premium training. Zero distractions. Discover REDLINE Fitness."
-/>
+    <meta
+      property="og:description"
+      content="Premium training. Zero distractions. Discover REDLINE Fitness."
+    />
 
-<meta
-  property="og:url"
-  content="https://glovatskiy.github.io/redline-fitness/"
-/>
+    <meta
+      property="og:url"
+      content="https://glovatskiy.github.io/redline-fitness/"
+    />
 
-<meta
-  property="og:image"
-  content="https://glovatskiy.github.io/redline-fitness/assets/images/hero-img.webp"
-/>
+    <meta
+      property="og:image"
+      content="https://glovatskiy.github.io/redline-fitness/assets/images/hero-img.webp"
+    />
 
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary_large_image" />
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -64,15 +64,15 @@
           <label for="red-room-toggle">RED ROOM</label>
           <input type="checkbox" id="red-room-toggle" />
         </div>
-       <button
-  type="button"
-  class="menu-toggle"
-  aria-label="Open navigation"
-  aria-controls="primary-navigation"
-  aria-expanded="false"
->
-  <i class="fa-solid fa-bars" aria-hidden="true"></i>
-</button>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
       </div>
       <a href="#classes" class="header-cta">BOOK A CLASS</a>
     </header>
@@ -412,8 +412,10 @@
 
           <p class="find-your-red-description">
             Step into the red light. Upload your photo and experience the
-            <span class="brand-red">RED</span>
-            <span class="brand-line">LINE</span>
+            <span class="brand-word">
+              <span class="brand-red">RED</span>
+              <span class="brand-line">LINE</span>
+            </span>
             aesthetic.
           </p>
 
@@ -428,84 +430,86 @@
       </section>
     </main>
     <!-- Footer -->
-<footer class="footer" id="footer">
-  <div class="footer-main">
-    <!-- Brand -->
-    <div class="footer-brand">
-      <a href="#" class="footer-logo" aria-label="REDLINE Fitness home">
-        <span class="brand-red">RED</span><span class="brand-line">LINE</span>
-      </a>
+    <footer class="footer" id="footer">
+      <div class="footer-main">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo" aria-label="REDLINE Fitness home">
+            <span class="brand-red">RED</span>
+            <span class="brand-line">LINE</span>
+          </a>
 
-      <p class="footer-tagline">TRAIN IN A DIFFERENT LIGHT.</p>
+          <p class="footer-tagline">TRAIN IN A DIFFERENT LIGHT.</p>
 
-      <div class="footer-socials">
-        <a href="#" aria-label="Instagram">
-          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="#" aria-label="TikTok">
-          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
-        </a>
-        <a href="#" aria-label="Spotify">
-          <i class="fa-brands fa-spotify" aria-hidden="true"></i>
-        </a>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Spotify">
+              <i class="fa-brands fa-spotify" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#trainers">TRAINERS</a>
+          <a href="#classes">SCHEDULE</a>
+          <a href="#membership">MEMBERSHIP</a>
+        </nav>
       </div>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="#trainers">TRAINERS</a>
-      <a href="#classes">SCHEDULE</a>
-      <a href="#membership">MEMBERSHIP</a>
-    </nav>
-  </div>
+      <div class="footer-bottom">
+        <p>PRAGUE, CZECH REPUBLIC</p>
 
-  <div class="footer-bottom">
-    <p>PRAGUE, CZECH REPUBLIC</p>
+        <div class="footer-legal">
+          <a href="#">PRIVACY</a>
+          <a href="#">TERMS</a>
+        </div>
 
-    <div class="footer-legal">
-      <a href="#">PRIVACY</a>
-      <a href="#">TERMS</a>
-    </div>
+        <p>© 2026 REDLINE PERFORMANCE STUDIO</p>
+      </div>
+    </footer>
+    <script>
+      const header = document.querySelector(".header");
+      const menuButton = header.querySelector(".menu-toggle");
+      const navigation = header.querySelector("#primary-navigation");
 
-    <p>© 2026 REDLINE PERFORMANCE STUDIO</p>
-  </div>
-</footer>
-<script>
-  const header = document.querySelector(".header");
-  const menuButton = header.querySelector(".menu-toggle");
-  const navigation = header.querySelector("#primary-navigation");
+      function setMenuOpen(open) {
+        header.toggleAttribute("data-menu-open", open);
+        menuButton.setAttribute("aria-expanded", String(open));
+        menuButton.setAttribute(
+          "aria-label",
+          open ? "Close navigation" : "Open navigation",
+        );
+        menuButton.querySelector("i").className = open
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      }
 
-  function setMenuOpen(open) {
-    header.toggleAttribute("data-menu-open", open);
-    menuButton.setAttribute("aria-expanded", String(open));
-    menuButton.setAttribute(
-      "aria-label",
-      open ? "Close navigation" : "Open navigation"
-    );
-    menuButton.querySelector("i").className =
-      open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-  }
+      menuButton.addEventListener("click", () => {
+        setMenuOpen(!header.hasAttribute("data-menu-open"));
+      });
 
-  menuButton.addEventListener("click", () => {
-    setMenuOpen(!header.hasAttribute("data-menu-open"));
-  });
+      navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) setMenuOpen(false);
+      });
 
-  navigation.addEventListener("click", (event) => {
-    if (event.target.closest("a")) setMenuOpen(false);
-  });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && header.hasAttribute("data-menu-open")) {
+          setMenuOpen(false);
+          menuButton.focus();
+        }
+      });
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && header.hasAttribute("data-menu-open")) {
-      setMenuOpen(false);
-      menuButton.focus();
-    }
-  });
+      window.matchMedia("(max-width: 767px)").addEventListener("change", () => {
+        setMenuOpen(false);
+      });
 
-  window.matchMedia("(max-width: 767px)").addEventListener("change", () => {
-    setMenuOpen(false);
-  });
-
-  header.setAttribute("data-menu-ready", "");
-</script>
+      header.setAttribute("data-menu-ready", "");
+    </script>
   </body>
 </html>

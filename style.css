@@ -305,7 +305,7 @@ a {
   filter: grayscale(100%);
   transition:
     filter 0.7s ease,
-    transform 0.7 ease;
+    transform 0.7s ease;
 }
 .trainer-card:hover .trainer-image img {
   filter: grayscale(0%);
@@ -782,6 +782,10 @@ a {
 .brand-line {
   color: var(--color-text);
 }
+.brand-word {
+  display: inline-flex;
+  gap: 0;
+}
 /*--- Footer ---*/
 
 .footer {
@@ -904,6 +908,15 @@ a {
   transition:
     color 0.4s ease,
     text-shadow 0.4s ease;
+}
+.footer-logo {
+  display: inline-flex;
+  gap: 0;
+}
+
+.footer-logo span {
+  margin: 0;
+  padding: 0;
 }
 
 /*--- RED ROOM Theme Toggle ---*/
