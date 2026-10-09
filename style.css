@@ -249,3 +249,41 @@ body:has(#red-room-toggle:checked) .logo-red {
     transform: translateY(8px) rotate(45deg);
   }
 }
+
+/* --- Scrolling Ticker ---*/
+
+.ticker {
+  background-color: var(--color-red);
+  color: var(--color-text);
+  height: 48px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  letter-spacing: 4px;
+  width: max-content;
+  gap: 12px;
+  animation: ticker-scroll 20s linear infinite;
+}
+
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 6px));
+    }
+}
+/* Accessibility: Disable ticker animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+}
