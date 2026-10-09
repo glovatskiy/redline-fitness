@@ -6,7 +6,10 @@
     <title>REDLINE Fitness | Train in a Different Light</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -38,7 +41,7 @@
       <a href="#classes" class="header-cta">BOOK A CLASS</a>
     </header>
     <main>
-      <!--- Hero -->
+      <!--- Hero --->
       <section class="hero">
         <div class="hero-content">
           <h1 class="hero-title">
@@ -55,7 +58,7 @@
           </a>
         </div>
       </section>
-      <!--- Scrollong Ticker -->
+      <!--- Scrollong Ticker --->
       <section class="ticker" aria-label="Training disciplines">
         <div class="ticker-track">
           <span>
@@ -72,7 +75,7 @@
           </span>
         </div>
       </section>
-      <!-- Trainers Section -->
+      <!-- Trainers Section --->
       <section id="trainers" class="trainers">
         <div class="trainers-header">
           <p class="section-label">THE ELITE</p>
@@ -85,29 +88,194 @@
         <div class="trainers-grid">
           <div class="trainer-card">
             <div class="trainer-image">
-                <img src="./assets/images/marcus-thorne-trainer.webp" alt="Marcus Thorne, strength trainer" />
-            <span class="trainer-specialisation">STRENGTH</span>
+              <img
+                src="./assets/images/marcus-thorne-trainer.webp"
+                alt="Marcus Thorne, strength trainer"
+              />
+              <span class="trainer-specialisation">STRENGTH</span>
             </div>
             <h3>MARCUS THORNE</h3>
-            <p>Ex-Special Forces. Focused on progressive overload and unbreakable mental discipline.</p>
+            <p>
+              Ex-Special Forces. Focused on progressive overload and unbreakable
+              mental discipline.
+            </p>
           </div>
           <div class="trainer-card">
             <div class="trainer-image">
-                <img src="./assets/images/elena-rossi-trainer.webp" alt="Elena Rossi, HIIT trainer" />
-            <span class="trainer-specialisation">HIIT</span>
+              <img
+                src="./assets/images/elena-rossi-trainer.webp"
+                alt="Elena Rossi, HIIT trainer"
+              />
+              <span class="trainer-specialisation">HIIT</span>
             </div>
             <h3>ELENA ROSSI</h3>
-            <p>Metabolic conditioning expert. Specialized in high-intensity cardiovascular performance.</p>
+            <p>
+              Metabolic conditioning expert. Specialized in high-intensity
+              cardiovascular performance.
+            </p>
           </div>
           <div class="trainer-card">
             <div class="trainer-image">
-                <img src="./assets/images/david-chen-trainer.webp" alt="David Chen, mobility trainer" />
-            <span class="trainer-specialisation">MOBILITY</span>
+              <img
+                src="./assets/images/david-chen-trainer.webp"
+                alt="David Chen, mobility trainer"
+              />
+              <span class="trainer-specialisation">MOBILITY</span>
             </div>
             <h3>DAVID CHEN</h3>
-            <p>Elite recovery specialist. Blending structural integrity with functional range of motion.</p>
+            <p>
+              Elite recovery specialist. Blending structural integrity with
+              functional range of motion.
+            </p>
           </div>
         </div>
+      </section>
+      <!-- Classes Section -->
+      <section id="classes" class="classes">
+        <div class="classes-header">
+          <div class="classes-heading">
+            <p class="section-label">PROGRAMMING</p>
+            <h2>
+              FIND YOUR
+              <br />
+              BREAKING POINT.
+            </h2>
+          </div>
+
+          <div class="classes-days">
+            <button type="button" class="day-button active">TODAY</button>
+            <button type="button" class="day-button">TOMORROW</button>
+          </div>
+        </div>
+
+        <div class="classes-grid">
+          <!-- Class Card 1: Power Hour -->
+          <article class="class-card">
+            <div class="class-card-top">
+              <div>
+                <p class="class-time">06:00 AM — MON</p>
+                <h3>POWER HOUR</h3>
+              </div>
+              <span class="class-difficulty">INTENSE</span>
+            </div>
+
+            <div class="class-card-bottom">
+              <div class="class-spots">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                <span>8 spots left</span>
+              </div>
+              <a href="#membership" class="class-book">BOOK</a>
+            </div>
+          </article>
+
+          <!-- Class Card 2: Redline Circuit -->
+          <article class="class-card">
+            <div class="class-card-top">
+              <div>
+                <p class="class-time">08:00 AM — MON</p>
+                <h3>REDLINE CIRCUIT</h3>
+              </div>
+              <span class="class-difficulty">INTERMEDIATE</span>
+            </div>
+
+            <div class="class-card-bottom">
+              <div class="class-spots">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                <span>4 spots left</span>
+              </div>
+              <a href="#membership" class="class-book">BOOK</a>
+            </div>
+          </article>
+
+          <!-- Class Card 3: Elite Strength -->
+          <article class="class-card class-card-full">
+            <div class="class-card-top">
+              <div>
+                <p class="class-time">10:30 AM — MON</p>
+                <h3>ELITE STRENGTH</h3>
+              </div>
+              <span class="class-difficulty class-status-full">FULL</span>
+            </div>
+
+            <div class="class-card-bottom">
+              <div class="class-spots">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                <span>Waitlist Open</span>
+              </div>
+              <a href="#membership" class="class-book class-book-waitlist">
+                WAITLIST
+              </a>
+            </div>
+          </article>
+
+          <!-- Class Card 4: HIIT Blast -->
+          <article class="class-card">
+            <div class="class-card-top">
+              <div>
+                <p class="class-time">05:00 PM — MON</p>
+                <h3>HIIT BLAST</h3>
+              </div>
+              <span class="class-difficulty">INTENSE</span>
+            </div>
+
+            <div class="class-card-bottom">
+              <div class="class-spots">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                <span>12 spots left</span>
+              </div>
+              <a href="#membership" class="class-book">BOOK</a>
+            </div>
+          </article>
+
+          <!-- Class Card 5: Recovery Flow -->
+          <article class="class-card">
+            <div class="class-card-top">
+              <div>
+                <p class="class-time">06:30 PM — MON</p>
+                <h3>RECOVERY FLOW</h3>
+              </div>
+              <span class="class-difficulty class-difficulty-beginner">
+                BEGINNER
+              </span>
+            </div>
+
+            <div class="class-card-bottom">
+              <div class="class-spots">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                <span>15 spots left</span>
+              </div>
+              <a href="#membership" class="class-book">BOOK</a>
+            </div>
+          </article>
+
+          <!-- Class Card 6: Late Strength -->
+          <article class="class-card">
+            <div class="class-card-top">
+              <div>
+                <p class="class-time">07:45 PM — MON</p>
+                <h3>LATE STRENGTH</h3>
+              </div>
+              <span class="class-difficulty">INTERMEDIATE</span>
+            </div>
+
+            <div class="class-card-bottom">
+              <div class="class-spots">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                <span>2 spots left</span>
+              </div>
+              <a href="#membership" class="class-book">BOOK</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Editorial Statement Section -->
+      <section class="editorial">
+        <h2>
+          BEYOND THE SURFACE.
+          <br />
+          INSIDE THE
+          <span class="editorial-red">RED.</span>
+        </h2>
       </section>
     </main>
   </body>

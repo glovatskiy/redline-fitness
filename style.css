@@ -157,9 +157,6 @@ body:has(#red-room-toggle:checked) .logo-red {
     0 0 6px rgba(255, 0, 0, 0.5),
     0 0 15px rgba(255, 0, 0, 0.25);
 }
-/* --- Trainers: RED ROOM Mode --- */
-
-/* RED ROOM — Trainers */
 
 body:has(#red-room-toggle:checked) .trainer-image::after {
   height: 100%;
@@ -170,6 +167,9 @@ body:has(#red-room-toggle:checked) .trainer-image::after {
     rgba(40, 0, 0, 0.15) 60%,
     rgba(40, 0, 0, 0) 100%
   );
+}
+body:has(#red-room-toggle:checked) .editorial-red {
+  text-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
 }
 /*--- HERO classes ---*/
 .hero{
@@ -383,4 +383,166 @@ body:has(#red-room-toggle:checked) .trainer-image::after {
   font-weight: 300;
   line-height: 1.7;
   color: var(--color-muted);
+}
+/*--- Classes styles --*/
+.classes{
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  padding: 120px 6%;
+}
+.classes-heading h2 {
+  font-family: var(--font-heading);
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1;
+}
+.classes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 80px;
+}
+.classes-days {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.day-button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: var(--color-muted);
+  padding: 10px 24px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.day-button.active {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-text);
+}
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.class-card {
+  background-color: var(--color-background);
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: border-color 0.3s ease, background-color 0.4s ease;
+}
+.class-card:hover {
+  border-color: var(--color-red);
+}
+.class-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.class-time {
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.class-card h3 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+}
+.class-difficulty {
+  flex-shrink: 0;
+  color: var(--color-red);
+  background-color: rgba(196, 0, 0, 0.1);
+  border: 1px solid rgba(196, 0, 0, 0.2);
+  padding: 6px 12px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.class-difficulty-beginner {
+  color: var(--color-text);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.class-status-full {
+  color: var(--color-muted);
+  background-color: #262626;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.class-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.class-spots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+.class-spots i {
+  color: var(--color-red);
+  font-size: 12px;
+}
+.class-book {
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--color-red);
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+.class-book:hover {
+  color: var(--color-red);
+}
+.class-card-full {
+  opacity: 0.75;
+}
+.class-card-full .class-spots i {
+  color: var(--color-muted);
+}
+.class-book-waitlist {
+  color: var(--color-muted);
+  border-bottom-color: #555;
+}
+.class-book-waitlist:hover {
+  color: var(--color-muted);
+}
+.class-card-full:hover {
+  border-color: #444;
+}
+/*--- Editorial Statement section ---*/
+.editorial {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 192px 6%;
+  text-align: center;
+}
+.editorial h2 {
+  font-family: var(--font-heading);
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -2px;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.editorial-red {
+  color: var(--color-red);
+  transition: color 0.4s ease, text-shadow 0.4s ease;
 }
